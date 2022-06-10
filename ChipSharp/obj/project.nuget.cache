@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "mrS0u8BGJaWY5y+4iYSM0fKvampuc7E6UQ14Cvf26ICJKYcbeeq/r9Lt5pFVRiRwfayji7kwRtCfaPM3S8Y+lA==",
+  "dgSpecHash": "CdcdKhj7vWCxQdIb9e8mZ4LCeHlWJduMUu7N9qIuMTe39BACzCSIwYY6MB0ZSVcgMuJkpxViNPB8jrk6+Sg06g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Liam\\Documents\\Code\\ChipSharp\\ChipSharp\\ChipSharp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk\\5.0.0-pre.7\\opentk.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.compute\\5.0.0-pre.7\\opentk.compute.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.core\\5.0.0-pre.7\\opentk.core.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.graphics\\5.0.0-pre.7\\opentk.graphics.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.input\\5.0.0-pre.7\\opentk.input.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.mathematics\\5.0.0-pre.7\\opentk.mathematics.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.openal\\5.0.0-pre.7\\opentk.openal.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.redist.glfw\\3.3.0-pre20200830200122\\opentk.redist.glfw.3.3.0-pre20200830200122.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.windowing.common\\5.0.0-pre.7\\opentk.windowing.common.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.windowing.desktop\\5.0.0-pre.7\\opentk.windowing.desktop.5.0.0-pre.7.nupkg.sha512",
+    "C:\\Users\\Liam\\.nuget\\packages\\opentk.windowing.graphicslibraryframework\\5.0.0-pre.7\\opentk.windowing.graphicslibraryframework.5.0.0-pre.7.nupkg.sha512"
+  ],
   "logs": []
 }
