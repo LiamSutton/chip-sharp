@@ -1,1 +1,1 @@
-﻿
+﻿Console.WriteLine("Chip-Sharp Initialising");
