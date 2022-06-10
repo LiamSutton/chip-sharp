@@ -13,3 +13,4 @@ C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\refint\ChipSha
 C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.pdb
 C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.genruntimeconfig.cache
 C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ref\ChipSharp.dll
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\bin\Debug\net6.0\Roms\IBMLogo.ch8

@@ -7,7 +7,7 @@ public class Vm
     private const int StackSize = 12;
     private const ushort RomStart = 0x200; // First 512 bytes or memory are empty for backwards compat reasons
     private const ushort MemoryStart = 0x0; // The first byte of the Vm's memory
-    
+
     private byte[] Fonts = // Contains the systems font-set which will be loaded into memory 
     {
         0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
@@ -37,6 +37,7 @@ public class Vm
     public byte SoundTimer { get; set; } // Decrements at a rate of 60Hz, will beep as long as value is non zero
     public byte[] V { get; set; } // 16 general purpose variable registers
     public bool[] Keys { get; set; } // Represents the state of the 16 available keys { Down = True, Up = False }
+    private ushort CurrentOpCode { get; set; } // The OpCode for the current instruction to be executed
 
     
     // Initialise key components of the Vm
@@ -101,9 +102,68 @@ public class Vm
     }
     private void Tick()
     {
+        CurrentOpCode = (ushort)(Memory[PC] << 8 | Memory[PC + 1]);
+        PC += 2;
+        
+        switch (CurrentOpCode & 0xF000)
+        {
+            case 0x0000 when CurrentOpCode == 0x00E0:
+                Execute0x00E0();
+                break;
+            case 0xA000:
+                Execute0xA000();
+                break;
+            case 0x6000:
+                Execute0x6000();
+                break;
+            case 0x7000:
+                Execute0x7000();
+                break;
+            default:
+                throw new InvalidOperationException($"Unimplemented OpCode: {CurrentOpCode:x4}, PC: {PC}");
+        }
+    }
+
+    #region OpCodes
+
+    // 0x00E0
+    private void Execute0x00E0() // Clear the display
+    {
+        Display = new byte[DisplaySize];
+    }
+
+    private void Execute0xA000() // Set I register = NNN
+    {
+        var nnn =  (ushort)(CurrentOpCode & 0x0FFF);
+        I = nnn;
+
         PC += 2;
     }
 
+    private void Execute0x6000() // Set Vx = KK
+    {
+        var x = (ushort) (CurrentOpCode & 0x0F00) >> 8;
+        var kk = (byte) (CurrentOpCode & 0x00FF);
+        V[x] = kk;
+
+        PC += 2;
+    }
+    #endregion
+
+    private void Execute0x7000()
+    {
+        var x = (ushort) (CurrentOpCode & 0x0F00) >> 8;
+        var nn = (byte) (CurrentOpCode & 0x00FF);
+
+        V[x] += nn;
+
+        PC += 2;
+    }
+
+    // DXYN
+    private void Execute0xD000()
+    {
+    }
     private void OutputDebugInformation()
     {
         Console.WriteLine($"PC: {PC}");

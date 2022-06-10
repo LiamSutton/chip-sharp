@@ -1,6 +1,5 @@
 ﻿using ChipSharp;
 
-var vm = Vm.CreateVm(new byte[] {0});
+var rom = File.ReadAllBytes("Roms/IBMLogo.ch8");
+var vm = Vm.CreateVm(rom);
 vm.Run(false);
-vm.Reset();
-vm.Run(true);
