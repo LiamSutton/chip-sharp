@@ -2,6 +2,9 @@
 
 public class Vm
 {
+    private const int DisplaySize = 64 * 32; // Screen is a 64 * 32 pixel grid
+    private const int MemorySize = 4096;
+    private const int StackSize = 12;
     private const ushort RomStart = 0x200; // First 512 bytes or memory are empty for backwards compat reasons
     private const ushort MemoryStart = 0x0; // The first byte of the Vm's memory
     
@@ -39,11 +42,11 @@ public class Vm
     // Initialise key components of the Vm
     public Vm()
     {
-        Memory = new byte[4096];
-        Display = new byte[64 * 32];
+        Memory = new byte[MemorySize];
+        Display = new byte[DisplaySize];
         PC = RomStart;
         I = 0;
-        Stack = new ushort[12];
+        Stack = new ushort[StackSize];
         SP = 0;
         DelayTimer = 0;
         SoundTimer = 0;
@@ -57,7 +60,7 @@ public class Vm
         var vm = new Vm();
         vm.LoadFonts();
         vm.LoadRom(rom);
-
+        
         return vm;
     }
     
@@ -67,9 +70,42 @@ public class Vm
         Fonts.CopyTo(Memory, MemoryStart);
     }
 
+    public void Reset()
+    {
+        PC = RomStart;
+        I = 0;
+        SP = 0;
+        Display = new byte[DisplaySize];
+    }
+    
     // Load a ROM into the VM's memory
     private void LoadRom(byte[] rom)
     {
         rom.CopyTo(Memory, RomStart);
+    }
+
+    public void Run(bool debugMode)
+    {
+        Console.WriteLine("== Running Vm ==");
+        for (var i = 0; i < 10; i++)
+        {
+            if (debugMode)
+            {
+                OutputDebugInformation();
+            }
+            
+            Tick();
+        }
+
+        Console.WriteLine("== Vm Finished ==\n");
+    }
+    private void Tick()
+    {
+        PC += 2;
+    }
+
+    private void OutputDebugInformation()
+    {
+        Console.WriteLine($"PC: {PC}");
     }
 }
