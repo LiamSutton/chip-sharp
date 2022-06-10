@@ -1,0 +1,15 @@
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\bin\Debug\net6.0\ChipSharp.exe
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\bin\Debug\net6.0\ChipSharp.deps.json
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\bin\Debug\net6.0\ChipSharp.runtimeconfig.json
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\bin\Debug\net6.0\ChipSharp.dll
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\bin\Debug\net6.0\ChipSharp.pdb
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.csproj.AssemblyReference.cache
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.AssemblyInfoInputs.cache
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.AssemblyInfo.cs
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.csproj.CoreCompileInputs.cache
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.dll
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\refint\ChipSharp.dll
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.pdb
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ChipSharp.genruntimeconfig.cache
+C:\Users\Liam\Documents\Code\ChipSharp\ChipSharp\obj\Debug\net6.0\ref\ChipSharp.dll
